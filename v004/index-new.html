@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cobra kai</title>
+    <style>
+        @font-face {
+            font-family: cobra;
+            src: url(fonts/Dead\ Stock\ -\ Demo.ttf);
+        }
+        :root{
+            --cor-do-header:#1c1f32;
+            --cor-do-main:#191b2a;
+            --cor-do-menu-lateral:#11111f;
+            --cor-de-destaque:#b8b82a;
+            --cor-de-destaque-hover:#8d8d2c;
+        }
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        body{
+            width: 100%;
+            height: max-content;
+            background-color: var(--cor-do-main);
+
+        }
+        header{
+            display: flex;
+            max-height: 40px;
+            background-color: var(--cor-do-header);
+            padding: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.288);
+
+        }
+        #menu-topo{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        #menu-topo button{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 0.85em;
+
+            max-width: 190px;
+            width: 100%;
+            padding: 15px 0px 15px 0px;
+            margin: -10px 0px -10px 0px;
+
+            color: var(--cor-de-destaque);
+            background-color: #ffffff00;
+            border-width: 3px;
+            border-top: 0ch;
+            border-left: 0ch;
+            border-right: 0ch;
+            border-bottom-color: #e52a5f00;
+        }
+        #menu-topo button:hover{
+            background-color: #00000015;
+            border-width: 3px;
+            border-top: 0ch;
+            border-left: 0ch;
+            border-right: 0ch;
+            border-bottom-color: var(--cor-de-destaque);
+        }
+        
+        #search{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+
+        }
+        #search img{
+            max-width: 55px;
+        }
+
+
+
+
+
+
+
+        #menu-lateral{
+            display: flex;
+            flex-direction: column;
+            background-color: var(--cor-do-menu-lateral);
+            max-width: 60px;
+            width: 100%;
+            height: 1000px;
+
+            box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.151);
+        }
+        #rede-social{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(220, 27, 20, 0);
+            max-width: 60px;
+            margin-top: 30px;
+        }
+
+        #rede-social span{
+            background-color: #e52a5f00;
+            background-size: cover;
+            width: 55px;
+            height: 55px;
+            margin: 5px 0px;
+            fill: #fc0d19;
+
+        }
+        #rede-social span:hover{
+            background-color: var(--cor-de-destaque);
+            border-style:solid;
+            border-width: 0px 3px 0px 0px;
+            border-color: var(--cor-de-destaque-hover);
+
+        }
+
+        #wpp{
+            background-image: url(Imagens/social-media/wppWh.png);
+            text-decoration: none;
+            vertical-align: middle;
+            fill: #fc0d19;
+            display: inline-block;
+            line-height: 90px;
+        }
+        #ig{
+            background-image: url(Imagens/social-media/instaYl.png);
+        }
+        #fb{
+            background-image: url(Imagens/social-media/fbYl.png);
+        }
+        #dsc{
+            background-image: url(Imagens/social-media/discordYl.png);
+        }
+
+        #wpp:hover{
+            background-image: url(Imagens/social-media/wppWh.png);
+        }
+        #ig:hover{
+            background-image: url(Imagens/social-media/instaWh.png);
+        }
+        #fb:hover{
+            background-image: url(Imagens/social-media/fbWh.png);
+        }
+        #dsc:hover{
+            background-image: url(Imagens/social-media/discordWh.png);
+        }
+
+
+
+
+        main{
+            display: flex;
+        }
+
+        #conteudo{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        #textos{
+            margin: 10px 10px 10px 30px;
+            width: 100%;
+            height: fit-content;
+            color: rgb(248, 248, 248);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #textos h1{
+            min-width: 130px;
+            font-weight: 900;
+            font-size: 7em;
+            margin-bottom: 20px;
+            font-family: scobra, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        #textos p{
+            margin: 10px;
+            font-weight: 500;
+            font-size: 1em;
+            line-height: 1.77em;
+        }
+
+        h1 span{
+            font-weight: normal;
+        }
+
+        #textos div{
+            display: flex;
+            align-items: center;
+            padding-inline: 10px;
+        }
+        #textos img{
+            height: 30px;
+            margin-right: 10px;
+        }
+        #img img{
+            max-width: 400px;
+            margin: 45px 10px 10px 10px;
+            background-color: aquamarine;
+        }
+        #img{
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            max-width: 600px;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    
+    <header>
+        <span id="menu-topo">
+            <button>HEADER</button>
+            <button>HEADER</button>
+            <button>HEADER</button>
+            <button>HEADER</button>
+            <button>HEADER</button>
+        </span>
+        <span id="search">
+            <img src="https://www.connexion.com.br/wp-content/uploads/2018/10/698627-icon-111-search-512.png" alt="">
+        </span>
+    </header>
+    
+    <main>
+        <div id="menu-lateral">
+            <section id="rede-social">
+                <span id="wpp"></span>
+                <span id="fb"></span>
+                <span id="ig"></span>
+                <span id="dsc"></span>
+            </section>
+        </div>
+
+        <div id="conteudo">
+            <section id="textos">
+                    <h1>COBRA <span>KAI</span></h1>
+                <div>
+                    <img alt="rating_djctq_14" src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/FD3368FCC6CBFDCF784890424C24CEE3ED08E43494DC701751350E6640EA0A15/scale?width=240">
+                    <img alt="Audiodescrição" src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/FD4912EB883B7CCB847EB9C62E1FC853D547CAF7DF940B9086AE35AFAD0848AB/scale?width=240">
+                    <img alt="Legendas para pessoas surdas e com deficiências auditivas" src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/FAE63AC7AC11C27C949E1856CF188BF09FC20EA52AEA3B65B43C24EEB5F29BFD/scale?width=240">
+                    <p>
+                        2018 ‧ 34 temporadas
+                    </p>
+                </div>
+                <p>
+                    Cobra Kai acontece 30 anos após os acontecimentos do filme original
+                    O torneio de All Valley de 1984 e segue a história de Johnny Lawrence
+                    fracassado e alcoólatra, que busca redenção, ao reabrir o infame dojo Cobra Kai,
+                    reacendendo a sua rivalidade com o agora bem-sucedido Daniel LaRusso, que tem lutado
+                    para manter o equilíbrio em sua vida sem a orientação de seu mentor, sr. Miyagi.
+                </p>
+
+            </section>
+
+            <section id="img">
+                <img src="https://gnnorthcurrent.org/wp-content/uploads/2021/02/v1.jpg" alt="">
+            </section>
+        </div>
+
+    </main>
+
+
+</body>
+</html>
